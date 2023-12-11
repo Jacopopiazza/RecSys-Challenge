@@ -9,6 +9,7 @@ from Recommenders.EASE_R.EASE_R_RecommenderV2 import EASE_R_RecommenderV2
 from Evaluation.Evaluator import EvaluatorHoldout
 import optuna as op
 from itertools import combinations
+import threading
 
 #Load urm splitted for repoducibility
 urm_train = sps.load_npz("Dataset/urm_train.npz")
@@ -28,49 +29,45 @@ evaluator_test = EvaluatorHoldout(urm_test, cutoff_list=[10], ignore_users=[])
 #Load best params for the models
 
 SLIMEN_best_params = {'topK': 7693, 'l1_ratio': 0.08013148517795793, 'alpha': 0.0012244028139782985}
-RP3Beta_best_params = {'topK': 41,
- 'alpha': 0.24025759098180052,
- 'beta': 0.21463311953617964,
- 'normalize_similarity': True}
+RP3Beta_best_params = {'topK': 41, 'alpha': 0.24025759098180052, 'beta': 0.21463311953617964, 'normalize_similarity': True}
 EASE_best_params = {'topK':None, 'normalize_matrix':False,'l2_norm':84.03422929536671}
 ItemKNN_best_params = {'topK': 23, 'shrink': 18, 'similarity': 'tversky', 'normalize': False}
 IALS_best_params = {'num_factors': 184, 'epochs': 110, 'confidence_scaling': 'linear', 'alpha': 13.161328184474756, 'epsilon': 0.2917133297273583, 'reg': 0.0005872701636540686}
 SLIMBPR_best_params = {'topK': 5, 'epochs': 60, 'symmetric': False, 'sgd_mode': 'adagrad', 'lambda_i': 1e-05, 'lambda_j': 1e-05, 'learning_rate': 0.1}
 
-#Define and train baseline models
 
-SLIMEN_recommender = SLIMElasticNetRecommender(urm_train)
+SLIMEN_recommender = SLIMElasticNetRecommender(urm_train+urm_validation+urm_test)
 #SLIMEN_recommender.fit(**SLIMEN_best_params)
 #SLIMEN_recommender.save_model("Hybrids_Experiments", SLIMEN_recommender.RECOMMENDER_NAME + "_train.zip")
 SLIMEN_recommender.load_model("Hybrids_Experiments", SLIMEN_recommender.RECOMMENDER_NAME + "_train.zip")
 
 gc.collect()
 
-RP3Beta_recommender = RP3betaRecommender(urm_train)
+RP3Beta_recommender = RP3betaRecommender(urm_train+urm_validation+urm_test)
 #RP3Beta_recommender.fit(**RP3Beta_best_params)
 #RP3Beta_recommender.save_model("Hybrids_Experiments", RP3Beta_recommender.RECOMMENDER_NAME + "_train.zip")
 RP3Beta_recommender.load_model("Hybrids_Experiments", RP3Beta_recommender.RECOMMENDER_NAME + "_train.zip")
 gc.collect()
 
-ITEMKNN_recommender = ItemKNNCFRecommender(urm_train)
+ITEMKNN_recommender = ItemKNNCFRecommender(urm_train+urm_validation+urm_test)
 #ITEMKNN_recommender.fit(**ItemKNN_best_params)
 #ITEMKNN_recommender.save_model("Hybrids_Experiments", ITEMKNN_recommender.RECOMMENDER_NAME + "_train.zip")
 ITEMKNN_recommender.load_model("Hybrids_Experiments", ITEMKNN_recommender.RECOMMENDER_NAME + "_train.zip")
 gc.collect()
 
-IALS_recommender = IALSRecommender(urm_train)
+IALS_recommender = IALSRecommender(urm_train+urm_validation+urm_test)
 #IALS_recommender.fit(**IALS_best_params)
 #IALS_recommender.save_model("Hybrids_Experiments", IALS_recommender.RECOMMENDER_NAME + "_train.zip")
-IALS_recommender.load_model("Hybrids_Experiments", IALS_recommender.RECOMMENDER_NAME + "_train.zip")
 gc.collect()
+IALS_recommender.load_model("Hybrids_Experiments", IALS_recommender.RECOMMENDER_NAME + "_train.zip")
 
-SLIMBPR_recommender = SLIM_BPR_Cython(urm_train)
+SLIMBPR_recommender = SLIM_BPR_Cython(urm_train+urm_validation+urm_test)
 #SLIMBPR_recommender.fit(**SLIMBPR_best_params)
 #SLIMBPR_recommender.save_model("Hybrids_Experiments", SLIMBPR_recommender.RECOMMENDER_NAME + "_train.zip")
 SLIMBPR_recommender.load_model("Hybrids_Experiments", SLIMBPR_recommender.RECOMMENDER_NAME + "_train.zip")
 gc.collect()
 
-EASE_recommender = EASE_R_Recommender(urm_train)
+EASE_recommender = EASE_R_Recommender(urm_train+urm_validation+urm_test)
 #EASE_recommender.fit(**EASE_best_params)
 #EASE_recommender.save_model("Hybrids_Experiments", EASE_recommender.RECOMMENDER_NAME + "_train.zip")
 EASE_recommender.load_model("Hybrids_Experiments", EASE_recommender.RECOMMENDER_NAME + "_train.zip")
