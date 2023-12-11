@@ -1,0 +1,4 @@
+#exclude file and folders from tracking
+Built_Hybrids/*
+Hybrids_Experiments/*
+STEPS_Training.csv
