@@ -46,7 +46,7 @@ class EASE_R_RecommenderV2(BaseItemSimilarityMatrixRecommender):
 
     """
 
-    RECOMMENDER_NAME = "EASE_R_Recommender"
+    RECOMMENDER_NAME = "EASE_R_RecommenderV2"
 
 
     def __init__(self, URM_train, sparse_threshold_quota = None, verbose = True):
@@ -152,7 +152,7 @@ class EASE_R_RecommenderV2(BaseItemSimilarityMatrixRecommender):
 
 
     def load_model(self, folder_path, file_name = None):
-        super(EASE_R_Recommender, self).load_model(folder_path, file_name = file_name)
+        super(EASE_R_RecommenderV2, self).load_model(folder_path, file_name = file_name)
 
         if not sps.issparse(self.W_sparse):
             self._W_sparse_format_checked = True
