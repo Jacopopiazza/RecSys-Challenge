@@ -78,8 +78,8 @@ class IALSRecommender(BaseMatrixFactorizationRecommender, Incremental_Training_E
         warm_user_mask = np.ediff1d(self.URM_train.indptr) > 0
         warm_item_mask = np.ediff1d(self.URM_train.tocsc().indptr) > 0
 
-        self.warm_users = np.arange(0, self.n_users, dtype=np.int32)[warm_user_mask]
-        self.warm_items = np.arange(0, self.n_items, dtype=np.int32)[warm_item_mask]
+        self.warm_users = np.arange(0, self.n_users, dtype=int32)[warm_user_mask]
+        self.warm_items = np.arange(0, self.n_items, dtype=int32)[warm_item_mask]
 
         self.regularization_diagonal = np.diag(self.reg * np.ones(self.num_factors))
 

@@ -226,8 +226,8 @@ class CFW_D_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixRe
 
         estimated_n_samples = int(S_matrix_contentKNN.nnz*(1+self.add_zeros_quota)*1.2)
 
-        self.row_list = np.zeros(estimated_n_samples, dtype=np.int32)
-        self.col_list = np.zeros(estimated_n_samples, dtype=np.int32)
+        self.row_list = np.zeros(estimated_n_samples, dtype=int32)
+        self.col_list = np.zeros(estimated_n_samples, dtype=int32)
         self.data_list = np.zeros(estimated_n_samples, dtype=np.float64)
 
         num_samples = 0
@@ -258,8 +258,8 @@ class CFW_D_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixRe
 
                 if num_samples == estimated_n_samples:
                     dataBlock = 1000000
-                    self.row_list = np.concatenate((self.row_list, np.zeros(dataBlock, dtype=np.int32)))
-                    self.col_list = np.concatenate((self.col_list, np.zeros(dataBlock, dtype=np.int32)))
+                    self.row_list = np.concatenate((self.row_list, np.zeros(dataBlock, dtype=int32)))
+                    self.col_list = np.concatenate((self.col_list, np.zeros(dataBlock, dtype=int32)))
                     self.data_list = np.concatenate((self.data_list, np.zeros(dataBlock, dtype=np.float64)))
 
                 if is_common[index]:

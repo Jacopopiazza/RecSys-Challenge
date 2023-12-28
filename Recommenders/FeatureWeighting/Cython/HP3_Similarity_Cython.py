@@ -167,8 +167,8 @@ class HP3_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixReco
 
         estimated_n_samples = int(S_matrix_contentKNN.nnz*(1+self.add_zeros_quota)*1.2)
 
-        self.row_list = np.zeros(estimated_n_samples, dtype=np.int32)
-        self.col_list = np.zeros(estimated_n_samples, dtype=np.int32)
+        self.row_list = np.zeros(estimated_n_samples, dtype=int32)
+        self.col_list = np.zeros(estimated_n_samples, dtype=int32)
         self.data_list = np.zeros(estimated_n_samples, dtype=np.float64)
 
         num_samples = 0
@@ -199,8 +199,8 @@ class HP3_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixReco
 
                 if num_samples == estimated_n_samples:
                     dataBlock = 1000000
-                    self.row_list = np.concatenate((self.row_list, np.zeros(dataBlock, dtype=np.int32)))
-                    self.col_list = np.concatenate((self.col_list, np.zeros(dataBlock, dtype=np.int32)))
+                    self.row_list = np.concatenate((self.row_list, np.zeros(dataBlock, dtype=int32)))
+                    self.col_list = np.concatenate((self.col_list, np.zeros(dataBlock, dtype=int32)))
                     self.data_list = np.concatenate((self.data_list, np.zeros(dataBlock, dtype=np.float64)))
 
                 if is_common[index]:
@@ -322,7 +322,7 @@ class HP3_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixReco
 
         block_dim = 300
         d_t = self.ICM * sps.diags([feature_weights.squeeze()], [0])
-        icm_t = self.ICM.astype(np.bool).T
+        icm_t = self.ICM.astype(bool).T
         indptr, indices, data = [0], [], []
         for r in range(0, self.n_items, block_dim):
             if r + block_dim > self.n_items:

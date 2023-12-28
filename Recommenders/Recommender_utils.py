@@ -95,7 +95,7 @@ def similarityMatrixTopK(item_weights, k=100, verbose = False, use_absolute_valu
 
         else:
             column_data = item_weights[:,item_idx]
-            column_row_index = np.arange(n_items, dtype=np.int32)
+            column_row_index = np.arange(n_items, dtype=int32)
 
         if np.any(column_data==0):
             non_zero_data = column_data!=0
@@ -119,7 +119,7 @@ def similarityMatrixTopK(item_weights, k=100, verbose = False, use_absolute_valu
 
 
         similarity_builder.add_data_lists(row_list_to_add = column_row_index,
-                                          col_list_to_add = np.ones(len(column_row_index), dtype = np.int) * item_idx,
+                                          col_list_to_add = np.ones(len(column_row_index), dtype = int) * item_idx,
                                           data_list_to_add = column_data)
 
 
