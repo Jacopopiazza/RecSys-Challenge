@@ -215,8 +215,8 @@ class FBSM_Rating_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixRecomme
             dataBlock = 10000000
 
             values = np.zeros(dataBlock, dtype=np.float32)
-            rows = np.zeros(dataBlock, dtype=np.int32)
-            cols = np.zeros(dataBlock, dtype=np.int32)
+            rows = np.zeros(dataBlock, dtype=int32)
+            cols = np.zeros(dataBlock, dtype=int32)
 
             numCells = 0
 
@@ -242,8 +242,8 @@ class FBSM_Rating_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrixRecomme
                 for index in range(len(values_to_add)):
 
                     if numCells == len(rows):
-                        rows = np.concatenate((rows, np.zeros(dataBlock, dtype=np.int32)))
-                        cols = np.concatenate((cols, np.zeros(dataBlock, dtype=np.int32)))
+                        rows = np.concatenate((rows, np.zeros(dataBlock, dtype=int32)))
+                        cols = np.concatenate((cols, np.zeros(dataBlock, dtype=int32)))
                         values = np.concatenate((values, np.zeros(dataBlock, dtype=np.float32)))
 
 

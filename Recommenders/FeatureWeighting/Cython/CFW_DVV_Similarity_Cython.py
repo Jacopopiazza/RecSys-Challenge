@@ -196,13 +196,13 @@ class CFW_DVV_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrix
         self.S_matrix_target = self.S_matrix_target.tocoo()
 
         if zeros_to_add != 0.0:
-            self.row_list = np.concatenate((np.array(self.S_matrix_target.row, dtype=np.int32), np.zeros(zeros_to_add, dtype=np.int32)))
-            self.col_list = np.concatenate((np.array(self.S_matrix_target.col, dtype=np.int32), np.zeros(zeros_to_add, dtype=np.int32)))
+            self.row_list = np.concatenate((np.array(self.S_matrix_target.row, dtype=int32), np.zeros(zeros_to_add, dtype=int32)))
+            self.col_list = np.concatenate((np.array(self.S_matrix_target.col, dtype=int32), np.zeros(zeros_to_add, dtype=int32)))
             self.data_list = np.concatenate((np.array(self.S_matrix_target.data, dtype=np.float64), np.zeros(zeros_to_add, dtype=np.float64)))
 
         else:
-            self.row_list = np.array(self.S_matrix_target.row, dtype=np.int32)
-            self.col_list = np.array(self.S_matrix_target.col, dtype=np.int32)
+            self.row_list = np.array(self.S_matrix_target.row, dtype=int32)
+            self.col_list = np.array(self.S_matrix_target.col, dtype=int32)
             self.data_list = np.array(self.S_matrix_target.data, dtype=np.float64)
 
         self._add_zeros_in_train_data_row_wise()
@@ -313,8 +313,8 @@ class CFW_DVV_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrix
             dataBlock = 10000000
 
             values = np.zeros(dataBlock, dtype=np.float32)
-            rows = np.zeros(dataBlock, dtype=np.int32)
-            cols = np.zeros(dataBlock, dtype=np.int32)
+            rows = np.zeros(dataBlock, dtype=int32)
+            cols = np.zeros(dataBlock, dtype=int32)
 
             numCells = 0
 
@@ -339,8 +339,8 @@ class CFW_DVV_Similarity_Cython(BaseItemCBFRecommender, BaseItemSimilarityMatrix
 
                     if numCells == len(rows):
                         rows = np.concatenate((rows, np.zeros(dataBlock, dtype=np.float32)))
-                        cols = np.concatenate((cols, np.zeros(dataBlock, dtype=np.int32)))
-                        values = np.concatenate((values, np.zeros(dataBlock, dtype=np.int32)))
+                        cols = np.concatenate((cols, np.zeros(dataBlock, dtype=int32)))
+                        values = np.concatenate((values, np.zeros(dataBlock, dtype=int32)))
 
 
                     rows[numCells] = rows_to_add[index]
