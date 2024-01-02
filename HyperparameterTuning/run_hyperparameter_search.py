@@ -22,6 +22,7 @@ from Recommenders.KNN.ItemKNNCFRecommender import ItemKNNCFRecommender
 from Recommenders.GraphBased.P3alphaRecommender import P3alphaRecommender
 from Recommenders.GraphBased.RP3betaRecommender import RP3betaRecommender
 from Recommenders.EASE_R.EASE_R_Recommender import EASE_R_Recommender
+from Recommenders.EASE_R.EASE_R_RecommenderV2 import EASE_R_RecommenderV2
 
 # KNN machine learning
 from Recommenders.SLIM.Cython.SLIM_BPR_Cython import SLIM_BPR_Cython
@@ -979,7 +980,7 @@ def runHyperparameterSearch_Collaborative(recommender_class, URM_train, URM_trai
 
         #########################################################################################################
 
-        if recommender_class is EASE_R_Recommender:
+        if recommender_class is EASE_R_Recommender or recommender_class is EASE_R_RecommenderV2:
 
             hyperparameters_range_dictionary = {
                 "topK": Categorical([None]),
