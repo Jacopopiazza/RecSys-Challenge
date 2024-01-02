@@ -2,3 +2,6 @@
 Built_Hybrids/*
 Hybrids_Experiments/*
 STEPS_Training.csv
+Notebook/Experiments/EASE*
+*.DS_Store
+**/__pycache__/

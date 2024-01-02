@@ -1,0 +1,9 @@
+On recommender <class 'Recommenders.SLIM.SLIMElasticNetRecommender.SLIMElasticNetRecommender'> Exception name 'int32' is not defined
+On recommender <class 'Recommenders.GraphBased.P3alphaRecommender.P3alphaRecommender'> Exception name 'int32' is not defined
+On recommender <class 'Recommenders.GraphBased.P3alphaRecommender.P3alphaRecommender'> Exception cannot import name 'get_filepath_or_buffer' from 'pandas.io.common' (/Users/japo/miniconda3/envs/RecSysFramework/lib/python3.8/site-packages/pandas/io/common.py)
+On recommender <class 'Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> Exception cannot import name 'get_filepath_or_buffer' from 'pandas.io.common' (/Users/japo/miniconda3/envs/RecSysFramework/lib/python3.8/site-packages/pandas/io/common.py)
+On recommender <class 'Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> Exception name 'integer' is not defined
+On recommender <class 'Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> Exception name 'integer' is not defined
+On recommender <class 'Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> Exception name 'integer' is not defined
+On recommender <class 'Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> Exception Type not recognized for attribute: topK
+On recommender <class 'Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> Exception name 'integer' is not defined

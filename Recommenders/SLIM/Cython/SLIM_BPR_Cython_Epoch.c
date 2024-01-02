@@ -3719,7 +3719,7 @@ static int __pyx_pf_21SLIM_BPR_Cython_Epoch_21SLIM_BPR_Cython_Epoch___init__(str
  *         self.final_model_sparse_weights = final_model_sparse_weights
  *         self.symmetric = symmetric             # <<<<<<<<<<<<<<
  * 
- *         self.URM_mask_indices = np.array(URM_mask.indices, dtype=np.int32)
+ *         self.URM_mask_indices = np.array(URM_mask.indices, dtype=int32)
  */
   __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_v_symmetric); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L1_error)
   __pyx_v_self->symmetric = __pyx_t_7;
@@ -3727,8 +3727,8 @@ static int __pyx_pf_21SLIM_BPR_Cython_Epoch_21SLIM_BPR_Cython_Epoch___init__(str
   /* "SLIM_BPR_Cython_Epoch.pyx":117
  *         self.symmetric = symmetric
  * 
- *         self.URM_mask_indices = np.array(URM_mask.indices, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.URM_mask_indptr = np.array(URM_mask.indptr, dtype=np.int32)
+ *         self.URM_mask_indices = np.array(URM_mask.indices, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.URM_mask_indptr = np.array(URM_mask.indptr, dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
@@ -3766,8 +3766,8 @@ static int __pyx_pf_21SLIM_BPR_Cython_Epoch_21SLIM_BPR_Cython_Epoch___init__(str
 
   /* "SLIM_BPR_Cython_Epoch.pyx":118
  * 
- *         self.URM_mask_indices = np.array(URM_mask.indices, dtype=np.int32)
- *         self.URM_mask_indptr = np.array(URM_mask.indptr, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.URM_mask_indices = np.array(URM_mask.indices, dtype=int32)
+ *         self.URM_mask_indptr = np.array(URM_mask.indptr, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  * 
  */

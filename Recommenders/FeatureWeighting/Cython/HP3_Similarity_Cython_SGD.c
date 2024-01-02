@@ -3091,7 +3091,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
  * 
  *         super(HP3_Similarity_Cython_SGD, self).__init__()             # <<<<<<<<<<<<<<
  * 
- *         self.row_list = np.array(row_list, dtype=np.int32)
+ *         self.row_list = np.array(row_list, dtype=int32)
  */
   __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -3127,8 +3127,8 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   /* "HP3_Similarity_Cython_SGD.pyx":73
  *         super(HP3_Similarity_Cython_SGD, self).__init__()
  * 
- *         self.row_list = np.array(row_list, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.col_list = np.array(col_list, dtype=np.int32)
+ *         self.row_list = np.array(row_list, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.col_list = np.array(col_list, dtype=int32)
  *         self.data_list = np.array(data_list, dtype=np.float64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
@@ -3164,8 +3164,8 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
 
   /* "HP3_Similarity_Cython_SGD.pyx":74
  * 
- *         self.row_list = np.array(row_list, dtype=np.int32)
- *         self.col_list = np.array(col_list, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.row_list = np.array(row_list, dtype=int32)
+ *         self.col_list = np.array(col_list, dtype=int32)             # <<<<<<<<<<<<<<
  *         self.data_list = np.array(data_list, dtype=np.float64)
  * 
  */
@@ -3201,8 +3201,8 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   __pyx_t_6.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":75
- *         self.row_list = np.array(row_list, dtype=np.int32)
- *         self.col_list = np.array(col_list, dtype=np.int32)
+ *         self.row_list = np.array(row_list, dtype=int32)
+ *         self.col_list = np.array(col_list, dtype=int32)
  *         self.data_list = np.array(data_list, dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         self.n_features = n_features
@@ -3393,7 +3393,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   /* "HP3_Similarity_Cython_SGD.pyx":89
  * 
  * 
- *         self.common_features_id = np.zeros((self.n_features), dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.common_features_id = np.zeros((self.n_features), dtype=int32)             # <<<<<<<<<<<<<<
  *         self.common_features_data = np.zeros((self.n_features), dtype=np.float64)
  *         self.common_features_data_i = np.zeros((self.n_features), dtype=np.float64)
  */
@@ -3432,10 +3432,10 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
 
   /* "HP3_Similarity_Cython_SGD.pyx":90
  * 
- *         self.common_features_id = np.zeros((self.n_features), dtype=np.int32)
+ *         self.common_features_id = np.zeros((self.n_features), dtype=int32)
  *         self.common_features_data = np.zeros((self.n_features), dtype=np.float64)             # <<<<<<<<<<<<<<
  *         self.common_features_data_i = np.zeros((self.n_features), dtype=np.float64)
- *         self.common_features_flag = np.zeros((self.n_features), dtype=np.int32)
+ *         self.common_features_flag = np.zeros((self.n_features), dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -3471,10 +3471,10 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   __pyx_t_7.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":91
- *         self.common_features_id = np.zeros((self.n_features), dtype=np.int32)
+ *         self.common_features_id = np.zeros((self.n_features), dtype=int32)
  *         self.common_features_data = np.zeros((self.n_features), dtype=np.float64)
  *         self.common_features_data_i = np.zeros((self.n_features), dtype=np.float64)             # <<<<<<<<<<<<<<
- *         self.common_features_flag = np.zeros((self.n_features), dtype=np.int32)
+ *         self.common_features_flag = np.zeros((self.n_features), dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
@@ -3513,7 +3513,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   /* "HP3_Similarity_Cython_SGD.pyx":92
  *         self.common_features_data = np.zeros((self.n_features), dtype=np.float64)
  *         self.common_features_data_i = np.zeros((self.n_features), dtype=np.float64)
- *         self.common_features_flag = np.zeros((self.n_features), dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.common_features_flag = np.zeros((self.n_features), dtype=int32)             # <<<<<<<<<<<<<<
  * 
  *         self.precompute_common_features = precompute_common_features
  */
@@ -3551,7 +3551,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   __pyx_t_6.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":94
- *         self.common_features_flag = np.zeros((self.n_features), dtype=np.int32)
+ *         self.common_features_flag = np.zeros((self.n_features), dtype=int32)
  * 
  *         self.precompute_common_features = precompute_common_features             # <<<<<<<<<<<<<<
  * 
@@ -3563,9 +3563,9 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   /* "HP3_Similarity_Cython_SGD.pyx":97
  * 
  *         #For now...
- *         ICM = ICM.astype(np.bool)             # <<<<<<<<<<<<<<
+ *         ICM = ICM.astype(bool)             # <<<<<<<<<<<<<<
  * 
- *         self.icm_indices = np.array(ICM.indices, dtype=np.int32)
+ *         self.icm_indices = np.array(ICM.indices, dtype=int32)
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_ICM, __pyx_n_s_astype); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -3594,10 +3594,10 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   __pyx_t_1 = 0;
 
   /* "HP3_Similarity_Cython_SGD.pyx":99
- *         ICM = ICM.astype(np.bool)
+ *         ICM = ICM.astype(bool)
  * 
- *         self.icm_indices = np.array(ICM.indices, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.icm_indptr = np.array(ICM.indptr, dtype=np.int32)
+ *         self.icm_indices = np.array(ICM.indices, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.icm_indptr = np.array(ICM.indptr, dtype=int32)
  *         self.icm_data = np.array(ICM.data, dtype=np.float64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
@@ -3635,8 +3635,8 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
 
   /* "HP3_Similarity_Cython_SGD.pyx":100
  * 
- *         self.icm_indices = np.array(ICM.indices, dtype=np.int32)
- *         self.icm_indptr = np.array(ICM.indptr, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.icm_indices = np.array(ICM.indices, dtype=int32)
+ *         self.icm_indptr = np.array(ICM.indptr, dtype=int32)             # <<<<<<<<<<<<<<
  *         self.icm_data = np.array(ICM.data, dtype=np.float64)
  * 
  */
@@ -3674,8 +3674,8 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   __pyx_t_6.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":101
- *         self.icm_indices = np.array(ICM.indices, dtype=np.int32)
- *         self.icm_indptr = np.array(ICM.indptr, dtype=np.int32)
+ *         self.icm_indices = np.array(ICM.indices, dtype=int32)
+ *         self.icm_indptr = np.array(ICM.indptr, dtype=int32)
  *         self.icm_data = np.array(ICM.data, dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *         if self.precompute_common_features:
@@ -3793,7 +3793,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
  * 
  *         self.use_dropout = use_dropout             # <<<<<<<<<<<<<<
  *         self.dropout_perc = dropout_perc
- *         self.dropout_mask = np.ones(self.n_features, dtype=np.int32)
+ *         self.dropout_mask = np.ones(self.n_features, dtype=int32)
  */
   __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_v_use_dropout); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L1_error)
   __pyx_v_self->use_dropout = __pyx_t_8;
@@ -3802,7 +3802,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
  * 
  *         self.use_dropout = use_dropout
  *         self.dropout_perc = dropout_perc             # <<<<<<<<<<<<<<
- *         self.dropout_mask = np.ones(self.n_features, dtype=np.int32)
+ *         self.dropout_mask = np.ones(self.n_features, dtype=int32)
  * 
  */
   __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_dropout_perc); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 109, __pyx_L1_error)
@@ -3811,7 +3811,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   /* "HP3_Similarity_Cython_SGD.pyx":110
  *         self.use_dropout = use_dropout
  *         self.dropout_perc = dropout_perc
- *         self.dropout_mask = np.ones(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.dropout_mask = np.ones(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  *         self.dpfInverse = np.asarray(np.reciprocal(ICM.sum(axis=0).astype(np.float64))).squeeze()
  */
@@ -3849,7 +3849,7 @@ static int __pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SGD___in
   __pyx_t_6.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":112
- *         self.dropout_mask = np.ones(self.n_features, dtype=np.int32)
+ *         self.dropout_mask = np.ones(self.n_features, dtype=int32)
  * 
  *         self.dpfInverse = np.asarray(np.reciprocal(ICM.sum(axis=0).astype(np.float64))).squeeze()             # <<<<<<<<<<<<<<
  *         self.dpfInverse[self.dpfInverse == -np.inf] = 0.0
@@ -4583,8 +4583,8 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
   /* "HP3_Similarity_Cython_SGD.pyx":163
  * 
  *         # Init Common features
- *         self.commonFeatures_indices = np.array(commonFeatures.indices, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.commonFeatures_indptr = np.array(commonFeatures.indptr, dtype=np.int32)
+ *         self.commonFeatures_indices = np.array(commonFeatures.indices, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.commonFeatures_indptr = np.array(commonFeatures.indptr, dtype=int32)
  *         self.commonFeatures_data = np.array(commonFeatures.data, dtype=np.float64)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
@@ -4622,8 +4622,8 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
 
   /* "HP3_Similarity_Cython_SGD.pyx":164
  *         # Init Common features
- *         self.commonFeatures_indices = np.array(commonFeatures.indices, dtype=np.int32)
- *         self.commonFeatures_indptr = np.array(commonFeatures.indptr, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.commonFeatures_indices = np.array(commonFeatures.indices, dtype=int32)
+ *         self.commonFeatures_indptr = np.array(commonFeatures.indptr, dtype=int32)             # <<<<<<<<<<<<<<
  *         self.commonFeatures_data = np.array(commonFeatures.data, dtype=np.float64)
  * 
  */
@@ -4661,8 +4661,8 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
   __pyx_t_7.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":165
- *         self.commonFeatures_indices = np.array(commonFeatures.indices, dtype=np.int32)
- *         self.commonFeatures_indptr = np.array(commonFeatures.indptr, dtype=np.int32)
+ *         self.commonFeatures_indices = np.array(commonFeatures.indices, dtype=int32)
+ *         self.commonFeatures_indptr = np.array(commonFeatures.indptr, dtype=int32)
  *         self.commonFeatures_data = np.array(commonFeatures.data, dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  * 
@@ -7429,8 +7429,8 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
   /* "HP3_Similarity_Cython_SGD.pyx":395
  * 
  *         # No duplicates
- *         f_i = np.array([0, 5, 8, 10, 19], dtype=np.int32)             # <<<<<<<<<<<<<<
- *         f_j = np.array([1, 7, 9, 11, 15, 18], dtype=np.int32)
+ *         f_i = np.array([0, 5, 8, 10, 19], dtype=int32)             # <<<<<<<<<<<<<<
+ *         f_j = np.array([1, 7, 9, 11, 15, 18], dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
@@ -7479,10 +7479,10 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
 
   /* "HP3_Similarity_Cython_SGD.pyx":396
  *         # No duplicates
- *         f_i = np.array([0, 5, 8, 10, 19], dtype=np.int32)
- *         f_j = np.array([1, 7, 9, 11, 15, 18], dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         f_i = np.array([0, 5, 8, 10, 19], dtype=int32)
+ *         f_j = np.array([1, 7, 9, 11, 15, 18], dtype=int32)             # <<<<<<<<<<<<<<
  * 
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -7532,9 +7532,9 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
   __pyx_t_4 = 0;
 
   /* "HP3_Similarity_Cython_SGD.pyx":398
- *         f_j = np.array([1, 7, 9, 11, 15, 18], dtype=np.int32)
+ *         f_j = np.array([1, 7, 9, 11, 15, 18], dtype=int32)
  * 
- *         common_np = np.intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
+ *         common_np = intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *         common_cy = self.common_features_id[0:count]
  */
@@ -7593,7 +7593,7 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
 
   /* "HP3_Similarity_Cython_SGD.pyx":399
  * 
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))             # <<<<<<<<<<<<<<
  *         common_cy = self.common_features_id[0:count]
  *         common_cy = np.sort(np.array(common_cy))
@@ -7667,7 +7667,7 @@ static PyObject *__pyx_pf_25HP3_Similarity_Cython_SGD_25HP3_Similarity_Cython_SG
   __pyx_t_10.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":400
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *         common_cy = self.common_features_id[0:count]             # <<<<<<<<<<<<<<
  *         common_cy = np.sort(np.array(common_cy))
@@ -7898,8 +7898,8 @@ __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
   /* "HP3_Similarity_Cython_SGD.pyx":408
  * 
  *         # Duplicates
- *         f_i = np.array([0, 5, 8, 10, 19], dtype=np.int32)             # <<<<<<<<<<<<<<
- *         f_j = np.array([1, 10, 11], dtype=np.int32)
+ *         f_i = np.array([0, 5, 8, 10, 19], dtype=int32)             # <<<<<<<<<<<<<<
+ *         f_j = np.array([1, 10, 11], dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 408, __pyx_L1_error)
@@ -7948,10 +7948,10 @@ __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
 
   /* "HP3_Similarity_Cython_SGD.pyx":409
  *         # Duplicates
- *         f_i = np.array([0, 5, 8, 10, 19], dtype=np.int32)
- *         f_j = np.array([1, 10, 11], dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         f_i = np.array([0, 5, 8, 10, 19], dtype=int32)
+ *         f_j = np.array([1, 10, 11], dtype=int32)             # <<<<<<<<<<<<<<
  * 
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 409, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -7992,9 +7992,9 @@ __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
   __pyx_t_3 = 0;
 
   /* "HP3_Similarity_Cython_SGD.pyx":411
- *         f_j = np.array([1, 10, 11], dtype=np.int32)
+ *         f_j = np.array([1, 10, 11], dtype=int32)
  * 
- *         common_np = np.intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
+ *         common_np = intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *         common_cy = self.common_features_id[0:count]
  */
@@ -8053,7 +8053,7 @@ __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
 
   /* "HP3_Similarity_Cython_SGD.pyx":412
  * 
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))             # <<<<<<<<<<<<<<
  *         common_cy = self.common_features_id[0:count]
  *         common_cy = np.sort(np.array(common_cy))
@@ -8127,7 +8127,7 @@ __pyx_t_5 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
   __pyx_t_9.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":413
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *         common_cy = self.common_features_id[0:count]             # <<<<<<<<<<<<<<
  *         common_cy = np.sort(np.array(common_cy))
@@ -8358,8 +8358,8 @@ __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_7, 1, (PyObject *(*)(char *)) __p
   /* "HP3_Similarity_Cython_SGD.pyx":421
  * 
  * 
- *         f_i = np.array([0, 5, 8, 10, 19], dtype=np.int32)             # <<<<<<<<<<<<<<
- *         f_j = np.array([1, 2, 5, 10, 15], dtype=np.int32)
+ *         f_i = np.array([0, 5, 8, 10, 19], dtype=int32)             # <<<<<<<<<<<<<<
+ *         f_j = np.array([1, 2, 5, 10, 15], dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 421, __pyx_L1_error)
@@ -8408,10 +8408,10 @@ __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_7, 1, (PyObject *(*)(char *)) __p
 
   /* "HP3_Similarity_Cython_SGD.pyx":422
  * 
- *         f_i = np.array([0, 5, 8, 10, 19], dtype=np.int32)
- *         f_j = np.array([1, 2, 5, 10, 15], dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         f_i = np.array([0, 5, 8, 10, 19], dtype=int32)
+ *         f_j = np.array([1, 2, 5, 10, 15], dtype=int32)             # <<<<<<<<<<<<<<
  * 
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 422, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
@@ -8458,9 +8458,9 @@ __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_7, 1, (PyObject *(*)(char *)) __p
   __pyx_t_2 = 0;
 
   /* "HP3_Similarity_Cython_SGD.pyx":424
- *         f_j = np.array([1, 2, 5, 10, 15], dtype=np.int32)
+ *         f_j = np.array([1, 2, 5, 10, 15], dtype=int32)
  * 
- *         common_np = np.intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
+ *         common_np = intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *         common_cy = self.common_features_id[0:count]
  */
@@ -8519,7 +8519,7 @@ __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_7, 1, (PyObject *(*)(char *)) __p
 
   /* "HP3_Similarity_Cython_SGD.pyx":425
  * 
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))             # <<<<<<<<<<<<<<
  *         common_cy = self.common_features_id[0:count]
  *         common_cy = np.sort(np.array(common_cy))
@@ -8593,7 +8593,7 @@ __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_t_7, 1, (PyObject *(*)(char *)) __p
   __pyx_t_10.data = NULL;
 
   /* "HP3_Similarity_Cython_SGD.pyx":426
- *         common_np = np.intersect1d(f_i, f_j)
+ *         common_np = intersect1d(f_i, f_j)
  *         count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *         common_cy = self.common_features_id[0:count]             # <<<<<<<<<<<<<<
  *         common_cy = np.sort(np.array(common_cy))
@@ -8835,7 +8835,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
  *         for _ in range(100):
  * 
  *             size_f_i = np.random.randint(1,10)             # <<<<<<<<<<<<<<
- *             f_i = np.random.randint(0,50, size=size_f_i, dtype=np.int32)
+ *             f_i = np.random.randint(0,50, size=size_f_i, dtype=int32)
  *             f_i = np.unique(f_i)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 436, __pyx_L1_error)
@@ -8855,7 +8855,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
     /* "HP3_Similarity_Cython_SGD.pyx":437
  * 
  *             size_f_i = np.random.randint(1,10)
- *             f_i = np.random.randint(0,50, size=size_f_i, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *             f_i = np.random.randint(0,50, size=size_f_i, dtype=int32)             # <<<<<<<<<<<<<<
  *             f_i = np.unique(f_i)
  * 
  */
@@ -8886,7 +8886,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
 
     /* "HP3_Similarity_Cython_SGD.pyx":438
  *             size_f_i = np.random.randint(1,10)
- *             f_i = np.random.randint(0,50, size=size_f_i, dtype=np.int32)
+ *             f_i = np.random.randint(0,50, size=size_f_i, dtype=int32)
  *             f_i = np.unique(f_i)             # <<<<<<<<<<<<<<
  * 
  *             size_f_j = np.random.randint(1,10)
@@ -8918,7 +8918,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
  *             f_i = np.unique(f_i)
  * 
  *             size_f_j = np.random.randint(1,10)             # <<<<<<<<<<<<<<
- *             f_j = np.random.randint(0,50, size=size_f_j, dtype=np.int32)
+ *             f_j = np.random.randint(0,50, size=size_f_j, dtype=int32)
  *             f_j = np.unique(f_j)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 440, __pyx_L1_error)
@@ -8938,7 +8938,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
     /* "HP3_Similarity_Cython_SGD.pyx":441
  * 
  *             size_f_j = np.random.randint(1,10)
- *             f_j = np.random.randint(0,50, size=size_f_j, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *             f_j = np.random.randint(0,50, size=size_f_j, dtype=int32)             # <<<<<<<<<<<<<<
  *             f_j = np.unique(f_j)
  * 
  */
@@ -8969,10 +8969,10 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
 
     /* "HP3_Similarity_Cython_SGD.pyx":442
  *             size_f_j = np.random.randint(1,10)
- *             f_j = np.random.randint(0,50, size=size_f_j, dtype=np.int32)
+ *             f_j = np.random.randint(0,50, size=size_f_j, dtype=int32)
  *             f_j = np.unique(f_j)             # <<<<<<<<<<<<<<
  * 
- *             common_np = np.intersect1d(f_i, f_j)
+ *             common_np = intersect1d(f_i, f_j)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 442, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
@@ -9000,7 +9000,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
     /* "HP3_Similarity_Cython_SGD.pyx":444
  *             f_j = np.unique(f_j)
  * 
- *             common_np = np.intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
+ *             common_np = intersect1d(f_i, f_j)             # <<<<<<<<<<<<<<
  *             count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *             common_cy = self.common_features_id[0:count]
  */
@@ -9059,7 +9059,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
 
     /* "HP3_Similarity_Cython_SGD.pyx":445
  * 
- *             common_np = np.intersect1d(f_i, f_j)
+ *             common_np = intersect1d(f_i, f_j)
  *             count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))             # <<<<<<<<<<<<<<
  *             common_cy = self.common_features_id[0:count]
  *             common_cy = np.sort(np.array(common_cy))
@@ -9133,7 +9133,7 @@ __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_8, 1, (PyObject *(*)(char *)) __p
     __pyx_t_9.data = NULL;
 
     /* "HP3_Similarity_Cython_SGD.pyx":446
- *             common_np = np.intersect1d(f_i, f_j)
+ *             common_np = intersect1d(f_i, f_j)
  *             count = self.feature_common_unordered(f_i, f_j, np.ones_like(f_i, dtype=np.float64), np.ones_like(f_j, dtype=np.float64))
  *             common_cy = self.common_features_id[0:count]             # <<<<<<<<<<<<<<
  *             common_cy = np.sort(np.array(common_cy))
@@ -25911,7 +25911,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         for _ in range(100):
  * 
  *             size_f_i = np.random.randint(1,10)             # <<<<<<<<<<<<<<
- *             f_i = np.random.randint(0,50, size=size_f_i, dtype=np.int32)
+ *             f_i = np.random.randint(0,50, size=size_f_i, dtype=int32)
  *             f_i = np.unique(f_i)
  */
   __pyx_tuple_ = PyTuple_Pack(2, __pyx_int_1, __pyx_int_10); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 436, __pyx_L1_error)
@@ -25921,7 +25921,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "HP3_Similarity_Cython_SGD.pyx":437
  * 
  *             size_f_i = np.random.randint(1,10)
- *             f_i = np.random.randint(0,50, size=size_f_i, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *             f_i = np.random.randint(0,50, size=size_f_i, dtype=int32)             # <<<<<<<<<<<<<<
  *             f_i = np.unique(f_i)
  * 
  */

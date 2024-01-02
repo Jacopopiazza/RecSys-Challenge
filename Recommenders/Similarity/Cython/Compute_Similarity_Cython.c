@@ -3532,7 +3532,7 @@ static int __pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cython___in
  * 
  *         self.topK = min(topK, self.n_columns)             # <<<<<<<<<<<<<<
  *         self.this_item_weights = np.zeros(self.n_columns, dtype=np.float64)
- *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=np.int32)
+ *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=int32)
  */
   __pyx_t_4 = __pyx_v_self->n_columns;
   __Pyx_INCREF(__pyx_v_topK);
@@ -3561,8 +3561,8 @@ static int __pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cython___in
  * 
  *         self.topK = min(topK, self.n_columns)
  *         self.this_item_weights = np.zeros(self.n_columns, dtype=np.float64)             # <<<<<<<<<<<<<<
- *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=np.int32)
- *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=np.int32)
+ *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=int32)
+ *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3600,8 +3600,8 @@ static int __pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cython___in
   /* "Compute_Similarity_Cython.pyx":149
  *         self.topK = min(topK, self.n_columns)
  *         self.this_item_weights = np.zeros(self.n_columns, dtype=np.float64)
- *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=np.int32)
+ *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=int32)
  *         self.this_item_weights_counter = 0
  */
   __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_np); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 149, __pyx_L1_error)
@@ -3639,8 +3639,8 @@ static int __pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cython___in
 
   /* "Compute_Similarity_Cython.pyx":150
  *         self.this_item_weights = np.zeros(self.n_columns, dtype=np.float64)
- *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=np.int32)
- *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=int32)
+ *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=int32)             # <<<<<<<<<<<<<<
  *         self.this_item_weights_counter = 0
  * 
  */
@@ -3678,8 +3678,8 @@ static int __pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cython___in
   __pyx_t_12.data = NULL;
 
   /* "Compute_Similarity_Cython.pyx":151
- *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=np.int32)
- *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=np.int32)
+ *         self.this_item_weights_id = np.zeros(self.n_columns, dtype=int32)
+ *         self.this_item_weights_mask = np.zeros(self.n_columns, dtype=int32)
  *         self.this_item_weights_counter = 0             # <<<<<<<<<<<<<<
  * 
  *         # Copy data to avoid altering the original object
@@ -6239,7 +6239,7 @@ static PyObject *__pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cytho
  *         # Preinitialize max possible length
  *         cdef unsigned long long max_cells = <long long> self.n_columns*self.topK             # <<<<<<<<<<<<<<
  *         cdef double[:] values = np.zeros((max_cells))
- *         cdef int[:] rows = np.zeros((max_cells,), dtype=np.int32)
+ *         cdef int[:] rows = np.zeros((max_cells,), dtype=int32)
  */
   __pyx_v_max_cells = (((PY_LONG_LONG)__pyx_v_self->n_columns) * __pyx_v_self->topK);
 
@@ -6247,8 +6247,8 @@ static PyObject *__pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cytho
  *         # Preinitialize max possible length
  *         cdef unsigned long long max_cells = <long long> self.n_columns*self.topK
  *         cdef double[:] values = np.zeros((max_cells))             # <<<<<<<<<<<<<<
- *         cdef int[:] rows = np.zeros((max_cells,), dtype=np.int32)
- *         cdef int[:] cols = np.zeros((max_cells,), dtype=np.int32)
+ *         cdef int[:] rows = np.zeros((max_cells,), dtype=int32)
+ *         cdef int[:] cols = np.zeros((max_cells,), dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -6282,8 +6282,8 @@ static PyObject *__pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cytho
   /* "Compute_Similarity_Cython.pyx":440
  *         cdef unsigned long long max_cells = <long long> self.n_columns*self.topK
  *         cdef double[:] values = np.zeros((max_cells))
- *         cdef int[:] rows = np.zeros((max_cells,), dtype=np.int32)             # <<<<<<<<<<<<<<
- *         cdef int[:] cols = np.zeros((max_cells,), dtype=np.int32)
+ *         cdef int[:] rows = np.zeros((max_cells,), dtype=int32)             # <<<<<<<<<<<<<<
+ *         cdef int[:] cols = np.zeros((max_cells,), dtype=int32)
  *         cdef long sparse_data_pointer = 0
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 440, __pyx_L1_error)
@@ -6325,8 +6325,8 @@ static PyObject *__pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cytho
 
   /* "Compute_Similarity_Cython.pyx":441
  *         cdef double[:] values = np.zeros((max_cells))
- *         cdef int[:] rows = np.zeros((max_cells,), dtype=np.int32)
- *         cdef int[:] cols = np.zeros((max_cells,), dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         cdef int[:] rows = np.zeros((max_cells,), dtype=int32)
+ *         cdef int[:] cols = np.zeros((max_cells,), dtype=int32)             # <<<<<<<<<<<<<<
  *         cdef long sparse_data_pointer = 0
  * 
  */
@@ -6368,8 +6368,8 @@ static PyObject *__pyx_pf_25Compute_Similarity_Cython_25Compute_Similarity_Cytho
   __pyx_t_8.data = NULL;
 
   /* "Compute_Similarity_Cython.pyx":442
- *         cdef int[:] rows = np.zeros((max_cells,), dtype=np.int32)
- *         cdef int[:] cols = np.zeros((max_cells,), dtype=np.int32)
+ *         cdef int[:] rows = np.zeros((max_cells,), dtype=int32)
+ *         cdef int[:] cols = np.zeros((max_cells,), dtype=int32)
  *         cdef long sparse_data_pointer = 0             # <<<<<<<<<<<<<<
  * 
  *         cdef int start_col_local = 0, end_col_local = self.n_columns

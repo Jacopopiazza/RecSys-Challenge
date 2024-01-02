@@ -4009,7 +4009,7 @@ static int __pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorization_Cyt
   /* "MatrixFactorization_Cython_Epoch.pyx":159
  * 
  * 
- *         self.factors_dropout_mask = np.ones(self.n_factors, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.factors_dropout_mask = np.ones(self.n_factors, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  *         if dropout_quota is None:
  */
@@ -4047,7 +4047,7 @@ static int __pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorization_Cyt
   __pyx_t_9.data = NULL;
 
   /* "MatrixFactorization_Cython_Epoch.pyx":161
- *         self.factors_dropout_mask = np.ones(self.n_factors, dtype=np.int32)
+ *         self.factors_dropout_mask = np.ones(self.n_factors, dtype=int32)
  * 
  *         if dropout_quota is None:             # <<<<<<<<<<<<<<
  *             self.dropout_flag = False
@@ -4076,7 +4076,7 @@ static int __pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorization_Cyt
     __pyx_v_self->dropout_quota = 0.0;
 
     /* "MatrixFactorization_Cython_Epoch.pyx":161
- *         self.factors_dropout_mask = np.ones(self.n_factors, dtype=np.int32)
+ *         self.factors_dropout_mask = np.ones(self.n_factors, dtype=int32)
  * 
  *         if dropout_quota is None:             # <<<<<<<<<<<<<<
  *             self.dropout_flag = False
@@ -10963,8 +10963,8 @@ static PyObject *__pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorizati
   /* "MatrixFactorization_Cython_Epoch.pyx":770
  * 
  *         # The shape depends on the batch size. 1 for FunkSVD 2 for BPR as it samples two items
- *         self.mini_batch_sampled_items = np.zeros(self.batch_size*2, dtype=np.int)             # <<<<<<<<<<<<<<
- *         self.mini_batch_sampled_users = np.zeros(self.batch_size, dtype=np.int)
+ *         self.mini_batch_sampled_items = np.zeros(self.batch_size*2, dtype=int)             # <<<<<<<<<<<<<<
+ *         self.mini_batch_sampled_users = np.zeros(self.batch_size, dtype=int)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 770, __pyx_L1_error)
@@ -11002,10 +11002,10 @@ static PyObject *__pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorizati
 
   /* "MatrixFactorization_Cython_Epoch.pyx":771
  *         # The shape depends on the batch size. 1 for FunkSVD 2 for BPR as it samples two items
- *         self.mini_batch_sampled_items = np.zeros(self.batch_size*2, dtype=np.int)
- *         self.mini_batch_sampled_users = np.zeros(self.batch_size, dtype=np.int)             # <<<<<<<<<<<<<<
+ *         self.mini_batch_sampled_items = np.zeros(self.batch_size*2, dtype=int)
+ *         self.mini_batch_sampled_users = np.zeros(self.batch_size, dtype=int)             # <<<<<<<<<<<<<<
  * 
- *         self.mini_batch_sampled_items_flag = np.zeros(self.n_items, dtype=np.int)
+ *         self.mini_batch_sampled_items_flag = np.zeros(self.n_items, dtype=int)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 771, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -11041,10 +11041,10 @@ static PyObject *__pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorizati
   __pyx_t_6.data = NULL;
 
   /* "MatrixFactorization_Cython_Epoch.pyx":773
- *         self.mini_batch_sampled_users = np.zeros(self.batch_size, dtype=np.int)
+ *         self.mini_batch_sampled_users = np.zeros(self.batch_size, dtype=int)
  * 
- *         self.mini_batch_sampled_items_flag = np.zeros(self.n_items, dtype=np.int)             # <<<<<<<<<<<<<<
- *         self.mini_batch_sampled_users_flag = np.zeros(self.n_users, dtype=np.int)
+ *         self.mini_batch_sampled_items_flag = np.zeros(self.n_items, dtype=int)             # <<<<<<<<<<<<<<
+ *         self.mini_batch_sampled_users_flag = np.zeros(self.n_users, dtype=int)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 773, __pyx_L1_error)
@@ -11082,8 +11082,8 @@ static PyObject *__pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorizati
 
   /* "MatrixFactorization_Cython_Epoch.pyx":774
  * 
- *         self.mini_batch_sampled_items_flag = np.zeros(self.n_items, dtype=np.int)
- *         self.mini_batch_sampled_users_flag = np.zeros(self.n_users, dtype=np.int)             # <<<<<<<<<<<<<<
+ *         self.mini_batch_sampled_items_flag = np.zeros(self.n_items, dtype=int)
+ *         self.mini_batch_sampled_users_flag = np.zeros(self.n_users, dtype=int)             # <<<<<<<<<<<<<<
  * 
  *         self.mini_batch_sampled_items_counter = 0
  */
@@ -11121,7 +11121,7 @@ static PyObject *__pyx_pf_32MatrixFactorization_Cython_Epoch_32MatrixFactorizati
   __pyx_t_6.data = NULL;
 
   /* "MatrixFactorization_Cython_Epoch.pyx":776
- *         self.mini_batch_sampled_users_flag = np.zeros(self.n_users, dtype=np.int)
+ *         self.mini_batch_sampled_users_flag = np.zeros(self.n_users, dtype=int)
  * 
  *         self.mini_batch_sampled_items_counter = 0             # <<<<<<<<<<<<<<
  *         self.mini_batch_sampled_users_counter = 0

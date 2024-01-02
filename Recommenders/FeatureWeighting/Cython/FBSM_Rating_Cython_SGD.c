@@ -3232,9 +3232,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
   /* "FBSM_Rating_Cython_SGD.pyx":91
  * 
  * 
- *         URM = check_matrix(URM, 'csr').astype(np.int32)             # <<<<<<<<<<<<<<
- *         self.URM_mask_indices = np.array(URM.indices, dtype=np.int32)
- *         self.URM_mask_indptr = np.array(URM.indptr, dtype=np.int32)
+ *         URM = check_matrix(URM, 'csr').astype(int32)             # <<<<<<<<<<<<<<
+ *         self.URM_mask_indices = np.array(URM.indices, dtype=int32)
+ *         self.URM_mask_indptr = np.array(URM.indptr, dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_check_matrix); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -3312,9 +3312,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
 
   /* "FBSM_Rating_Cython_SGD.pyx":92
  * 
- *         URM = check_matrix(URM, 'csr').astype(np.int32)
- *         self.URM_mask_indices = np.array(URM.indices, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.URM_mask_indptr = np.array(URM.indptr, dtype=np.int32)
+ *         URM = check_matrix(URM, 'csr').astype(int32)
+ *         self.URM_mask_indices = np.array(URM.indices, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.URM_mask_indptr = np.array(URM.indptr, dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
@@ -3351,11 +3351,11 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
   __pyx_t_7.data = NULL;
 
   /* "FBSM_Rating_Cython_SGD.pyx":93
- *         URM = check_matrix(URM, 'csr').astype(np.int32)
- *         self.URM_mask_indices = np.array(URM.indices, dtype=np.int32)
- *         self.URM_mask_indptr = np.array(URM.indptr, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         URM = check_matrix(URM, 'csr').astype(int32)
+ *         self.URM_mask_indices = np.array(URM.indices, dtype=int32)
+ *         self.URM_mask_indptr = np.array(URM.indptr, dtype=int32)             # <<<<<<<<<<<<<<
  * 
- *         ICM = check_matrix(ICM, 'csr').astype(np.int32)
+ *         ICM = check_matrix(ICM, 'csr').astype(int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
@@ -3391,11 +3391,11 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
   __pyx_t_7.data = NULL;
 
   /* "FBSM_Rating_Cython_SGD.pyx":95
- *         self.URM_mask_indptr = np.array(URM.indptr, dtype=np.int32)
+ *         self.URM_mask_indptr = np.array(URM.indptr, dtype=int32)
  * 
- *         ICM = check_matrix(ICM, 'csr').astype(np.int32)             # <<<<<<<<<<<<<<
- *         self.ICM_indices = np.array(ICM.indices, dtype=np.int32)
- *         self.ICM_indptr = np.array(ICM.indptr, dtype=np.int32)
+ *         ICM = check_matrix(ICM, 'csr').astype(int32)             # <<<<<<<<<<<<<<
+ *         self.ICM_indices = np.array(ICM.indices, dtype=int32)
+ *         self.ICM_indptr = np.array(ICM.indptr, dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_check_matrix); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
@@ -3473,9 +3473,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
 
   /* "FBSM_Rating_Cython_SGD.pyx":96
  * 
- *         ICM = check_matrix(ICM, 'csr').astype(np.int32)
- *         self.ICM_indices = np.array(ICM.indices, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.ICM_indptr = np.array(ICM.indptr, dtype=np.int32)
+ *         ICM = check_matrix(ICM, 'csr').astype(int32)
+ *         self.ICM_indices = np.array(ICM.indices, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.ICM_indptr = np.array(ICM.indptr, dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
@@ -3512,9 +3512,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
   __pyx_t_7.data = NULL;
 
   /* "FBSM_Rating_Cython_SGD.pyx":97
- *         ICM = check_matrix(ICM, 'csr').astype(np.int32)
- *         self.ICM_indices = np.array(ICM.indices, dtype=np.int32)
- *         self.ICM_indptr = np.array(ICM.indptr, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         ICM = check_matrix(ICM, 'csr').astype(int32)
+ *         self.ICM_indices = np.array(ICM.indices, dtype=int32)
+ *         self.ICM_indptr = np.array(ICM.indptr, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -4437,8 +4437,8 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
     /* "FBSM_Rating_Cython_SGD.pyx":147
  *             # Compute sum of occurrencies of features in items each user interacted with
  *             # self.User_feature_count = #users, #features
- *             URM.data = np.ones_like(URM.data, np.int32)             # <<<<<<<<<<<<<<
- *             user_feature_count = (URM * ICM).astype(np.int32)
+ *             URM.data = np.ones_like(URM.data, int32)             # <<<<<<<<<<<<<<
+ *             user_feature_count = (URM * ICM).astype(int32)
  * 
  */
     __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 147, __pyx_L1_error)
@@ -4507,8 +4507,8 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
 
     /* "FBSM_Rating_Cython_SGD.pyx":148
  *             # self.User_feature_count = #users, #features
- *             URM.data = np.ones_like(URM.data, np.int32)
- *             user_feature_count = (URM * ICM).astype(np.int32)             # <<<<<<<<<<<<<<
+ *             URM.data = np.ones_like(URM.data, int32)
+ *             user_feature_count = (URM * ICM).astype(int32)             # <<<<<<<<<<<<<<
  * 
  *             user_feature_count = check_matrix(user_feature_count, 'csr')
  */
@@ -4542,11 +4542,11 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
     __pyx_t_2 = 0;
 
     /* "FBSM_Rating_Cython_SGD.pyx":150
- *             user_feature_count = (URM * ICM).astype(np.int32)
+ *             user_feature_count = (URM * ICM).astype(int32)
  * 
  *             user_feature_count = check_matrix(user_feature_count, 'csr')             # <<<<<<<<<<<<<<
- *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=np.int32)
- *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=np.int32)
+ *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=int32)
+ *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=int32)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_check_matrix); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
@@ -4601,9 +4601,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
     /* "FBSM_Rating_Cython_SGD.pyx":151
  * 
  *             user_feature_count = check_matrix(user_feature_count, 'csr')
- *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=np.int32)             # <<<<<<<<<<<<<<
- *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=np.int32)
- *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=np.int32)
+ *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=int32)             # <<<<<<<<<<<<<<
+ *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=int32)
+ *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=int32)
  */
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -4640,9 +4640,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
 
     /* "FBSM_Rating_Cython_SGD.pyx":152
  *             user_feature_count = check_matrix(user_feature_count, 'csr')
- *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=np.int32)
- *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=np.int32)             # <<<<<<<<<<<<<<
- *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=np.int32)
+ *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=int32)
+ *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=int32)             # <<<<<<<<<<<<<<
+ *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=int32)
  * 
  */
     __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 152, __pyx_L1_error)
@@ -4679,9 +4679,9 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
     __pyx_t_7.data = NULL;
 
     /* "FBSM_Rating_Cython_SGD.pyx":153
- *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=np.int32)
- *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=np.int32)
- *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *             self.user_feature_count_indices = np.array(user_feature_count.indices, dtype=int32)
+ *             self.user_feature_count_indptr = np.array(user_feature_count.indptr, dtype=int32)
+ *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  *             if self.verbose:
  */
@@ -4719,7 +4719,7 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
     __pyx_t_7.data = NULL;
 
     /* "FBSM_Rating_Cython_SGD.pyx":155
- *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=np.int32)
+ *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=int32)
  * 
  *             if self.verbose:             # <<<<<<<<<<<<<<
  *                 print("FBSM_Rating_Cython: Precomputing user_feature_count... Done. "
@@ -4834,7 +4834,7 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "FBSM_Rating_Cython_SGD.pyx":155
- *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=np.int32)
+ *             self.user_feature_count_data = np.array(user_feature_count.data, dtype=int32)
  * 
  *             if self.verbose:             # <<<<<<<<<<<<<<
  *                 print("FBSM_Rating_Cython: Precomputing user_feature_count... Done. "
@@ -4855,8 +4855,8 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
   /* "FBSM_Rating_Cython_SGD.pyx":162
  * 
  *         else:
- *             self.user_feature_count_counter_temp = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
- *             self.user_feature_count_flag = np.zeros(self.n_features, dtype=np.int32)
+ *             self.user_feature_count_counter_temp = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
+ *             self.user_feature_count_flag = np.zeros(self.n_features, dtype=int32)
  * 
  */
   /*else*/ {
@@ -4895,8 +4895,8 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
 
     /* "FBSM_Rating_Cython_SGD.pyx":163
  *         else:
- *             self.user_feature_count_counter_temp = np.zeros(self.n_features, dtype=np.int32)
- *             self.user_feature_count_flag = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *             self.user_feature_count_counter_temp = np.zeros(self.n_features, dtype=int32)
+ *             self.user_feature_count_flag = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  *         self.user_feature_count_len = 0
  */
@@ -4936,19 +4936,19 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
   __pyx_L7:;
 
   /* "FBSM_Rating_Cython_SGD.pyx":165
- *             self.user_feature_count_flag = np.zeros(self.n_features, dtype=np.int32)
+ *             self.user_feature_count_flag = np.zeros(self.n_features, dtype=int32)
  * 
  *         self.user_feature_count_len = 0             # <<<<<<<<<<<<<<
- *         self.user_feature_count_id = np.zeros(self.n_features, dtype=np.int32)
- *         self.user_feature_count_counter = np.zeros(self.n_features, dtype=np.int32)
+ *         self.user_feature_count_id = np.zeros(self.n_features, dtype=int32)
+ *         self.user_feature_count_counter = np.zeros(self.n_features, dtype=int32)
  */
   __pyx_v_self->user_feature_count_len = 0;
 
   /* "FBSM_Rating_Cython_SGD.pyx":166
  * 
  *         self.user_feature_count_len = 0
- *         self.user_feature_count_id = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         self.user_feature_count_counter = np.zeros(self.n_features, dtype=np.int32)
+ *         self.user_feature_count_id = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
+ *         self.user_feature_count_counter = np.zeros(self.n_features, dtype=int32)
  * 
  */
   __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_np); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 166, __pyx_L1_error)
@@ -4986,8 +4986,8 @@ static int __pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD___init__(s
 
   /* "FBSM_Rating_Cython_SGD.pyx":167
  *         self.user_feature_count_len = 0
- *         self.user_feature_count_id = np.zeros(self.n_features, dtype=np.int32)
- *         self.user_feature_count_counter = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         self.user_feature_count_id = np.zeros(self.n_features, dtype=int32)
+ *         self.user_feature_count_counter = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -5757,7 +5757,7 @@ static PyObject *__pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD_2fit
   /* "FBSM_Rating_Cython_SGD.pyx":231
  *         cdef BPR_sample sample
  * 
- *         cdef int [:] user_feature_count_u_full_vector = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         cdef int [:] user_feature_count_u_full_vector = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
  *         cdef double [:] D_update = np.zeros(self.n_features, dtype=np.float64)
  *         cdef double [:,:] V_update = np.zeros((self.n_factors, self.n_features), dtype=np.float64)
  */
@@ -5795,10 +5795,10 @@ static PyObject *__pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD_2fit
 
   /* "FBSM_Rating_Cython_SGD.pyx":232
  * 
- *         cdef int [:] user_feature_count_u_full_vector = np.zeros(self.n_features, dtype=np.int32)
+ *         cdef int [:] user_feature_count_u_full_vector = np.zeros(self.n_features, dtype=int32)
  *         cdef double [:] D_update = np.zeros(self.n_features, dtype=np.float64)             # <<<<<<<<<<<<<<
  *         cdef double [:,:] V_update = np.zeros((self.n_factors, self.n_features), dtype=np.float64)
- *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=np.int32)
+ *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -5833,11 +5833,11 @@ static PyObject *__pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD_2fit
   __pyx_t_7.data = NULL;
 
   /* "FBSM_Rating_Cython_SGD.pyx":233
- *         cdef int [:] user_feature_count_u_full_vector = np.zeros(self.n_features, dtype=np.int32)
+ *         cdef int [:] user_feature_count_u_full_vector = np.zeros(self.n_features, dtype=int32)
  *         cdef double [:] D_update = np.zeros(self.n_features, dtype=np.float64)
  *         cdef double [:,:] V_update = np.zeros((self.n_factors, self.n_features), dtype=np.float64)             # <<<<<<<<<<<<<<
- *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=np.int32)
- *         cdef int [:] updated_features_flag = np.zeros(self.n_features, dtype=np.int32)
+ *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=int32)
+ *         cdef int [:] updated_features_flag = np.zeros(self.n_features, dtype=int32)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 233, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
@@ -5884,8 +5884,8 @@ static PyObject *__pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD_2fit
   /* "FBSM_Rating_Cython_SGD.pyx":234
  *         cdef double [:] D_update = np.zeros(self.n_features, dtype=np.float64)
  *         cdef double [:,:] V_update = np.zeros((self.n_factors, self.n_features), dtype=np.float64)
- *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
- *         cdef int [:] updated_features_flag = np.zeros(self.n_features, dtype=np.int32)
+ *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
+ *         cdef int [:] updated_features_flag = np.zeros(self.n_features, dtype=int32)
  *         cdef int updated_features_count
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
@@ -5922,8 +5922,8 @@ static PyObject *__pyx_pf_22FBSM_Rating_Cython_SGD_22FBSM_Rating_Cython_SGD_2fit
 
   /* "FBSM_Rating_Cython_SGD.pyx":235
  *         cdef double [:,:] V_update = np.zeros((self.n_factors, self.n_features), dtype=np.float64)
- *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=np.int32)
- *         cdef int [:] updated_features_flag = np.zeros(self.n_features, dtype=np.int32)             # <<<<<<<<<<<<<<
+ *         cdef int [:] updated_features_id = np.zeros(self.n_features, dtype=int32)
+ *         cdef int [:] updated_features_flag = np.zeros(self.n_features, dtype=int32)             # <<<<<<<<<<<<<<
  *         cdef int updated_features_count
  * 
  */
