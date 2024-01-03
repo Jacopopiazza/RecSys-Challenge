@@ -1,97 +1,63 @@
-import numpy as np
-
-
-from Recommenders.BaseMatrixFactorizationRecommender import BaseMatrixFactorizationRecommender
-from Recommenders.BaseRecommender import BaseRecommender
-from Recommenders.Incremental_Training_Early_Stopping import Incremental_Training_Early_Stopping
-from Recommenders.Recommender_utils import check_matrix
 import implicit
+from Recommenders.BaseMatrixFactorizationRecommender import BaseMatrixFactorizationRecommender
+import numpy as np
+from Recommenders.Recommender_utils import check_matrix
 
 
+def linear_scaling_confidence(URM_train, alpha,epsilon):
 
-class ImplicitIALSRecommender(BaseRecommender):
+    C = check_matrix(URM_train, format="csr", dtype = np.float32)
+    C.data = 1.0 + alpha*C.data
 
+    return C
 
-    RECOMMENDER_NAME = "Implicit-IALSRecommender"
+def log_scaling_confidence(URM_train, alpha,epsilon):
 
-    def __init__(self, URM_train, factors=50, iterations=25, verbose=True):
+    C = check_matrix(URM_train, format="csr", dtype = np.float32)
+    C.data = 1.0 + alpha * np.log(1.0 + C.data / epsilon)
 
-        super(BaseRecommender, self).__init__()
-        self.URM_train = check_matrix(URM_train.copy(), 'csr', dtype=np.float32)
-        self.model = implicit.als.AlternatingLeastSquares(factors=factors, iterations=iterations)
-        self.epochs_done = 0
-        self.best_validation_metric = None
+    return C
 
-    def _run_epoch(self, num_epoch):
-        self.model.fit(self.URM_train)
+class ImplicitALSRecommender(BaseMatrixFactorizationRecommender):
+    """ImplicitALSRecommender recommender"""
 
-    def _compute_item_score(self, user_id_array, items_to_compute = None):
-        _, scores = self.model.recommend(user_id_array, self.URM_train[user_id_array], N=self.URM_train.shape[1])
-        return scores
+    RECOMMENDER_NAME = "ImplicitALSRecommender"
 
-    
-    #def recommend(self, user_id_array, cutoff=None, remove_seen_flag=True, items_to_compute=None, remove_top_pop_flag=False, remove_custom_items_flag=False, return_scores=False):
-    #    
-        
-    #    print(f"PARAMS: user_id_array={user_id_array}, remove_seen_flag={remove_seen_flag}, items_to_compute={items_to_compute}, remove_top_pop_flag={remove_top_pop_flag}, remove_custom_items_flag={remove_custom_items_flag}, return_scores={return_scores}")
-    #    if remove_seen_flag:
-    #        self._remove_seen_on_scores()
+    def _build_confidence_matrix(self, confidence_scaling):
 
-    #    toBeReturned, scores = self.model.recommend(user_id_array, self.URM_train[user_id_array], N=self.URM_train.shape[1]-self.URM_train[user_id_array].nnz)
-    #    if cutoff:
-    #        toBeReturned = toBeReturned[:cutoff]
-    #    if return_scores:
-    #        return toBeReturned.tolist(), scores
-    #    return toBeReturned.tolist()
-
-    def _prepare_model_for_validation(self):
-        pass
-
-       
-    def fit(self,epochs=100, **earlystopping_kwargs):
-
-        if "validation_every_n" in earlystopping_kwargs:
-            validation_every_n = earlystopping_kwargs["validation_every_n"]
-        if "evaluator_object" in earlystopping_kwargs:
-            evaluator_object = earlystopping_kwargs["evaluator_object"]
-        if "validation_metric" in earlystopping_kwargs:
-            validation_metric = earlystopping_kwargs["validation_metric"]
-        if "stop_on_validation" in earlystopping_kwargs:
-            stop_on_validation = earlystopping_kwargs["stop_on_validation"]
-        if "lower_validations_allowed" in earlystopping_kwargs:
-            lower_validations_allowed = earlystopping_kwargs["lower_validations_allowed"]
-        if "epochs_min" in earlystopping_kwargs:
-            epochs_min = earlystopping_kwargs["epochs_min"]
+        if confidence_scaling == 'linear':
+            self.C = self._linear_scaling_confidence()
         else:
-            epochs_min = 0
+            self.C = self._log_scaling_confidence()
 
-        lower_validatons_count = 0
+        self.C_csc= check_matrix(self.C.copy(), format="csc", dtype = np.float32)
 
-        for i in range(epochs):
-            self._run_epoch(self.epochs_done+1)
-            self.epochs_done += 1
 
-            if not validation_every_n is None:
-                if self.epochs_done % validation_every_n == 0:
-                    results_run, results_run_string = evaluator_object.evaluateRecommender(self)
-                    current_metric_value = results_run.iloc[0][validation_metric]
 
-                    print(f"Current MAP: {current_metric_value} @ epoch : {self.epochs_done}")
-                    print(f"Curr scores:{ self._compute_item_score([0])}")
 
-                    if self.best_validation_metric is None or self.best_validation_metric < current_metric_value:
 
-                        print(f"New best model found! MAP: {current_metric_value} @ epoch : {self.epochs_done}")
-                        self.best_validation_metric = current_metric_value
-                        #self._update_best_model()
 
-                        self.epochs_best = self.epochs_done
-                        lower_validatons_count = 0
+    def fit(self,
+            num_factors=100,
+            reg=0.01,
+            use_native=True, use_cg=True, use_gpu=True,
+            epochs=15,
+            calculate_training_loss=False, num_threads=0, alpha=1.0, epsilon = 1.0, confidence_scaling="linear"
+            ):
 
-                    else:
-                        lower_validatons_count += 1
+        print(f"Using gpu: {use_gpu}")
 
-                    if stop_on_validation and lower_validatons_count >= lower_validations_allowed and self.epochs_done >= epochs_min:
-                        print("{}: Convergence reached! Terminating at epoch {}. Best value for '{}' at epoch {} is {:.4f}".format(
-                            self.RECOMMENDER_NAME, self.epochs_done, validation_metric, self.epochs_best, self.best_validation_metric))
-                        return
+        conf_scale = linear_scaling_confidence if confidence_scaling=="linear" else log_scaling_confidence
+
+        self.rec = implicit.als.AlternatingLeastSquares(factors=num_factors, regularization=reg,
+                                                        use_native=use_native, use_cg=use_cg, use_gpu=use_gpu,
+                                                        iterations=epochs,
+                                                        calculate_training_loss=calculate_training_loss,
+                                                        num_threads=num_threads)
+        self.rec.fit(conf_scale(self.URM_train, alpha, epsilon), show_progress=self.verbose)
+
+        if(use_gpu):
+            self.rec = self.rec.to_cpu()
+
+        self.USER_factors = self.rec.user_factors
+        self.ITEM_factors = self.rec.item_factors
