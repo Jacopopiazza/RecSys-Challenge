@@ -49,7 +49,7 @@ class EASE_R_RecommenderV2(BaseItemSimilarityMatrixRecommender):
     RECOMMENDER_NAME = "EASE_R_RecommenderV2"
 
 
-    def __init__(self, URM_train, sparse_threshold_quota = None, verbose = True):
+    def __init__(self, URM_train, sparse_threshold_quota = 0.01, verbose = True):
         super(EASE_R_RecommenderV2, self).__init__(URM_train, verbose = verbose)
         self.sparse_threshold_quota = sparse_threshold_quota
 
@@ -81,6 +81,8 @@ class EASE_R_RecommenderV2(BaseItemSimilarityMatrixRecommender):
 
         new_time_value, new_time_unit = seconds_to_biggest_unit(time.time()-start_time)
         self._print("Fitting model... done in {:.2f} {}".format( new_time_value, new_time_unit))
+
+        B = B.A
 
         # Check if the matrix should be saved in a sparse or dense format
         # The matrix is sparse, regardless of the presence of the topK, if nonzero cells are less than sparse_threshold_quota %
