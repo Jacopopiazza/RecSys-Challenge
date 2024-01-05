@@ -102,7 +102,7 @@ model = RP3betaRecommender
 import optuna as op
 
 def objective(trial):
-    topK = trial.suggest_int("topK", 5, 1000)
+    topK = trial.suggest_int("topK", 5, 100)
     #l1 = trial.suggest_float("l1_ratio", 0.01, 0.1)
     alpha = trial.suggest_float("alpha", 0, 1) # maybe [0.5-1]?
     beta = trial.suggest_float("beta", 0, 1)
