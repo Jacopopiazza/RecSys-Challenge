@@ -118,7 +118,7 @@ def objective(trial):
 
         # Assuming your metric of interest is stored in 'metric_value'
         # Replace 'metric_value' with your actual evaluation metric
-        if MAP_result < 0.046:  # Set your threshold for pruning here
+        if MAP_result < 0.0445:  # Set your threshold for pruning here
             # Prune the trial if the condition is met
             #trial.report(MAP_result, step=i)  # Report the metric
             #if trial.should_prune():  # Check if the trial should be pruned
