@@ -13,8 +13,7 @@ The goal of the competition was to create a recommender system for books, provid
 
 ## Results
 
-* Ranked 1st
-* MAP@10 - private: &nbsp;0.13956
+* MAP@10 - private: &nbsp;0.13956 
 * MAP@10 - public: &nbsp;&nbsp;&nbsp;0.13977
 
 ## Goal
