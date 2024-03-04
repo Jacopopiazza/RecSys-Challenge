@@ -38,7 +38,7 @@ Our best recommender is a hybrid composed of
 
 ## Team
 * [Jacopo Piazzalunga](https://github.com/Jacopopiazza)
-* [Davide Salonico](https://github.com/???)
+* [Davide Salonico](https://github.com/DavideSalonico)
 
 ## Credits
 This repository is based on [Maurizio Dacrema's repository](https://github.com/MaurizioFD/RecSys_Course_AT_PoliMi)
