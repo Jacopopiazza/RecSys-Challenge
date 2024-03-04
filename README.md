@@ -34,7 +34,12 @@ Our best recommender is a hybrid composed of
 * SLIM ElasticNet
 * RP3Beta
 * IALS
-* ItemKNN
+* ItemKNN CF
+
+In order to simulate test-case conditions more accurately, we adopted K-Fold cross-validation for both model validation and hyperparameter tuning.
+
+## Notebooks
+Useful notebooks should already be available in the Notebook folder.
 
 ## Team
 * [Jacopo Piazzalunga](https://github.com/Jacopopiazza)
