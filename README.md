@@ -27,7 +27,7 @@ The training-test split is done via random holdout, 80% training, 20% test.
 The goal is to recommend a list of 10 potentially relevant items for each user. MAP@10 is used for evaluation. You can use any kind of recommender algorithm you wish written in Python. 
 
 ## Evaluation
-The evaluation metric for this competition is MAP@10.
+The evaluation metric for this competition was MAP@10.
 
 ## Recommender
 Our best recommender is a hybrid composed of
