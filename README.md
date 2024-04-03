@@ -14,7 +14,8 @@ The goal of the competition was to create a recommender system for books, provid
 ## Results
 
 * MAP@10 - private: &nbsp;0.13956 
-* MAP@10 - public: &nbsp;&nbsp;&nbsp;0.13977
+* MAP@10 - public: &nbsp;0.13977
+* Ranked 22nd
 
 ## Goal
 The application domain is book recommendation. 
