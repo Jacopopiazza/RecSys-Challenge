@@ -34,17 +34,18 @@ class GeneralizedLinearHybridRecommenderCold(BaseRecommender):
         for index in range(1,len(self.alphas)):
             result = result + self.alphas[index]*self.recommenders[index]._compute_item_score(user_id_array,items_to_compute)
         
-        rows_with_less_than_nonzero = []
+        #rows_with_less_than_nonzero = []
         for index, user in enumerate(user_id_array):
             
             start_index = self.URM_train.indptr[index]
             end_index = self.URM_train.indptr[index + 1]
             num_nonzero_elements_in_row = end_index - start_index
             if num_nonzero_elements_in_row <= self.COLD_Under_Interactions:
-                rows_with_less_than_nonzero.append((index,user))
+                #rows_with_less_than_nonzero.append((index,user))
+                result[index] = self.COLD_recommender._compute_item_score([user], items_to_compute)
 
-        for index,user in rows_with_less_than_nonzero:
-            result[index] = self.COLD_recommender._compute_item_score([user], items_to_compute)
+        #for index,user in rows_with_less_than_nonzero:
+            #result[index] = self.COLD_recommender._compute_item_score([user], items_to_compute)
 
         
 

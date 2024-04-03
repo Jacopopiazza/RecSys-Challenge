@@ -1,4 +1,0 @@
-experiment:
-  data_config:
-    strategy: dataset
-    dataset_path: /Users/japo/RecSys/RecSys-Challenge/Dataset/elliot/data_train.tsv
