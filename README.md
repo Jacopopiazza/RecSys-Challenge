@@ -41,6 +41,16 @@ In order to simulate test-case conditions more accurately, we adopted K-Fold cro
 A clean version of our final notebook will be uploaded soon.
 Some notebook implementing distributed optimization are still missing, they will be uploaded soon.
 
+## Hyperparameter Tuning
+
+Hyperparameter tuning played a pivotal role in enhancing the performance of our recommender system. Initially, we employed skopt and the repository's provided classes, which encompassed common ranges for the various hyperparameters of the model. This approach allowed us to explore the hyperparameter space efficiently and improve the model's effectiveness.
+
+However, to further optimize our model and leverage distributed training, we transitioned to Optuna. Optuna facilitated distributed training, initially on the network and subsequently utilizing a hosted MySQL database. This enabled us to distribute the workload among our personal computers and Kaggle's notebooks, harnessing the collective computing power for more extensive hyperparameter search and tuning. This transition significantly accelerated our optimization process and contributed to the refinement of our recommender system.
+
+## Exploring XGBoost
+
+In our pursuit of maximizing performance, we explored the possibility of integrating XGBoost into our recommender system. This endeavor involved retraining all our models and optimizing them for Recall@25 instead of MAP@10, aiming to leverage the strengths of XGBoost for improved recommendation accuracy. However, despite our efforts, we consistently obtained inferior results compared to our baseline hybrid model. This outcome suggests that we may have made some mistakes in the implementation or parameter tuning of the XGBoosted model. Nevertheless, this experience has provided valuable insights, and we remain commited to revisiting and refining the XGBoosted model in the future. An updated and correct version of the XGBoosted model may emerge in the coming months, reflecting our ongoing commitment to enhancing the performance and robustness of our recommender system.
+
 ## Notebooks
 Useful notebooks should already be available in the Notebook folder.
 
