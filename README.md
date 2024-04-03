@@ -39,8 +39,7 @@ Our best recommender is a hybrid composed of
 
 In order to simulate test-case conditions more accurately, we adopted K-Fold cross-validation for both model validation and hyperparameter tuning.
 
-A clean version of our final notebook will be uploaded soon.
-Some notebook implementing distributed optimization are still missing, they will be uploaded soon.
+Some interesting notebooks can be found in [Notebooks](/Notebooks)
 
 ## Hyperparameter Tuning
 
